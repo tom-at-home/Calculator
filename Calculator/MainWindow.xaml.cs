@@ -61,5 +61,10 @@ namespace Calculator
             clearMainscreen = true;
             calculator.Calculate(operand, @operator);
         }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            calculator.Clear();
+        }
     }
 }

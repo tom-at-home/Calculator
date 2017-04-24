@@ -45,7 +45,6 @@ namespace Calculator
                     cachedOperator = @operator;
                 }
 
-                
             }
         }
 
@@ -79,6 +78,13 @@ namespace Calculator
             }
         }
 
+        public void Clear()
+        {
+            leftOperand = null;
+            rightOperand = null;
+            mainwindow.mainscreen.Content = "";
+            mainwindow.subscreen.Content = "";
+        }
 
     }
 }
