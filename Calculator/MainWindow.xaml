@@ -5,35 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        Title="Calculator" Width="300" Height="360">
+    <Canvas Height="270" Width="200">
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50" />
-            <ColumnDefinition Width="50" />
-            <ColumnDefinition Width="50" />
-        </Grid.ColumnDefinitions>
+        <WrapPanel Canvas.Top="9" Canvas.Left="1" Width="198" Height="60">
+            <Label Name="mainscreen" Width="198" Height="38" Background="Gray" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="24"/>
+            <Label Name="subscreen" Width="198" Height="22" Background="Gray" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="10" VerticalContentAlignment="Top"/>
+        </WrapPanel>
 
-        <Button Grid.Column="0" Grid.Row="0" x:Name="d7" Content="7" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
-        <Button Grid.Column="1" Grid.Row="0" x:Name="d8" Content="8" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
-        <Button Grid.Column="2" Grid.Row="0" x:Name="d9" Content="9" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
 
-        <Button Grid.Column="0" Grid.Row="1" x:Name="d6" Content="6" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
-        <Button Grid.Column="1" Grid.Row="1" x:Name="d5" Content="5" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
-        <Button Grid.Column="2" Grid.Row="1" x:Name="d4" Content="4" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
+        <Grid Canvas.Top="70" Canvas.Left="0" Width="200" Height="200">
 
-        <Button Grid.Column="0" Grid.Row="2" x:Name="d3" Content="3" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
-        <Button Grid.Column="1" Grid.Row="2" x:Name="d2" Content="2" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
-        <Button Grid.Column="2" Grid.Row="2" x:Name="d1" Content="1" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+            </Grid.ColumnDefinitions>
 
-        <Button Grid.Column="1" Grid.Row="3" x:Name="d0" Content="0" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
-        <Button Grid.Column="2" Grid.Row="3" x:Name="eq" Content="=" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
+            <Button Grid.Column="0" Grid.Row="0" x:Name="d7" Content="7" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="48" Click="Digit_Click" />
+            <Button Grid.Column="1" Grid.Row="0" x:Name="d8" Content="8" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="48" Click="Digit_Click" />
+            <Button Grid.Column="2" Grid.Row="0" x:Name="d9" Content="9" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="48" Click="Digit_Click" />
+            <Button Grid.Column="3" Grid.Row="0" x:Name="divBtn" Content="/" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="48" Click="Operator_Click" Background="DodgerBlue"/>
 
-    </Grid>
+            <Button Grid.Column="0" Grid.Row="1" x:Name="d4" Content="4" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="48" Click="Digit_Click" />
+            <Button Grid.Column="1" Grid.Row="1" x:Name="d5" Content="5" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="48" Click="Digit_Click" />
+            <Button Grid.Column="2" Grid.Row="1" x:Name="d6" Content="6" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="48" Click="Digit_Click" />
+            <Button Grid.Column="3" Grid.Row="1" x:Name="mplBtn" Content="*" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="48" Click="Operator_Click" Background="DodgerBlue"/>
+
+            <Button Grid.Column="0" Grid.Row="2" x:Name="d1" Content="1" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="48" Click="Digit_Click" />
+            <Button Grid.Column="1" Grid.Row="2" x:Name="d2" Content="2" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="48" Click="Digit_Click" />
+            <Button Grid.Column="2" Grid.Row="2" x:Name="d3" Content="3" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="48" Click="Digit_Click" />
+            <Button Grid.Column="3" Grid.Row="2" x:Name="subBtn" Content="-" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="48" Click="Operator_Click" Background="DodgerBlue"/>
+
+            <Button Grid.Column="0" Grid.Row="3" x:Name="d0" Content="0" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="48" Click="Digit_Click" />
+            <Button Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" x:Name="eq" Content="=" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="96" Click="Operator_Click" Background="Orange"/>
+            <Button Grid.Column="3" Grid.Row="3" x:Name="addBtn" Content="+" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="48" Click="Operator_Click" Background="DodgerBlue" />
+        </Grid>
+
+    </Canvas>
+     
 </Window>

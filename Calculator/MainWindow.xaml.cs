@@ -20,9 +20,46 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        MyCalculator calculator;
+        bool clearMainscreen = false;
+        bool clearSubscreen = false;
+
         public MainWindow()
         {
             InitializeComponent();
+            this.calculator = new MyCalculator(this);
+        }
+
+        private void Digit_Click(object sender, RoutedEventArgs e)
+        {
+            Button currBtn = (Button)sender;
+            string currVal = Convert.ToString(currBtn.Content);
+            if (clearMainscreen)
+            {
+                mainscreen.Content = "";
+            }
+            if (clearSubscreen)
+            {
+                subscreen.Content = "";
+            }
+            mainscreen.Content += currVal;
+            subscreen.Content += currVal;
+            clearMainscreen = false;
+            clearSubscreen = false;
+        }
+
+        private void Operator_Click(object sender, RoutedEventArgs e)
+        {
+            Button currBtn = (Button)sender;
+            double operand = Convert.ToDouble(mainscreen.Content);
+            string @operator = Convert.ToString(currBtn.Content);
+            if(@operator != "=")
+            {
+                subscreen.Content += " " + @operator + " ";
+            }
+            clearMainscreen = true;
+            calculator.Calculate(operand, @operator);
         }
     }
 }
