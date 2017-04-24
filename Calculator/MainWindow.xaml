@@ -7,6 +7,33 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Column="0" Grid.Row="0" x:Name="d7" Content="7" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
+        <Button Grid.Column="1" Grid.Row="0" x:Name="d8" Content="8" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
+        <Button Grid.Column="2" Grid.Row="0" x:Name="d9" Content="9" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
+
+        <Button Grid.Column="0" Grid.Row="1" x:Name="d6" Content="6" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
+        <Button Grid.Column="1" Grid.Row="1" x:Name="d5" Content="5" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
+        <Button Grid.Column="2" Grid.Row="1" x:Name="d4" Content="4" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
+
+        <Button Grid.Column="0" Grid.Row="2" x:Name="d3" Content="3" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
+        <Button Grid.Column="1" Grid.Row="2" x:Name="d2" Content="2" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
+        <Button Grid.Column="2" Grid.Row="2" x:Name="d1" Content="1" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
+
+        <Button Grid.Column="1" Grid.Row="3" x:Name="d0" Content="0" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
+        <Button Grid.Column="2" Grid.Row="3" x:Name="eq" Content="=" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="40"/>
+
     </Grid>
 </Window>
