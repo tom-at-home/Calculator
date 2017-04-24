@@ -31,7 +31,7 @@ namespace Calculator
             else if(rightOperand == null)
             {
                 rightOperand = new Operand { value = operand };
-                SetResult(@cachedOperator);
+                SetResult(cachedOperator);
                 leftOperand.value = result;
                 rightOperand = null;
 
